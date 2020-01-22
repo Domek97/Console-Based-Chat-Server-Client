@@ -2,14 +2,14 @@ FILES:
 motd- Contains MOTD for users to access. Is not ever edited inside the program
 users- contains user data for logging in. Is not ever edited inside the program
 
-Methods: (All methods are accessed by the client)
+Methods: (All methods are accessed by the client and carried out by the server)
 Server.class
 
 -get_message: prints the next motd in the list to the user and prepares the next mods to be accessed. 
 	usage: NA
 
 -login: logs the user in by checking to see if their credentials match any user in the file users.txt and will print an error if they are already logged in.
-	usage: LOGIN username password
+	usage: NA
 
 -logout: logs the user out if they are logged in and prints an error if they are not logged in
 	usage: NA
@@ -39,8 +39,7 @@ Client.class
 	usage: LOGOUT
 
 -store_message: Store Message: Receives Server's output on whether user is logged in or not, then sends output to server for new MOTD
-	usage: MSGSTORE
-	<new MOTD>
+	usage: MSGSTORE <new MOTD>
 
 -shutdown: Receives input from server whether it was successful, then closes all sockets and application
 	usage: SHUTDOWN
